@@ -1,0 +1,15 @@
+{
+  "name": "courses",
+  "version": "1.0.0",
+  "description": "Some JS/TS Courses",
+  "main": "index.js",
+  "author": "millehorde",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "reveal-md": "^3.4.7"
+  },
+  "scripts": {
+    "start": "npx reveal-md -w --theme sky --highlight-theme monokai"
+  }
+}
