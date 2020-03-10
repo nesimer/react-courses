@@ -34,7 +34,7 @@ Découvrir les bases de React pour être autonome
 - Comment obtenir quelque chose sur une page avec des composants et du JSX
 - Passage de données dans nos composants avec des `props`
 - Rendre nos composants React interactifs entre eux avec des states et des hooks
-- Consommer une api avec des hooks d'effet (`useEffect`)
+- Consommer une api avec des hooks d'effets (`useEffect`)
 - Deployer sa première app 🎉
 
 ----
@@ -61,7 +61,7 @@ Composant React = morceaux de contenu et de logique réutilisables sur une page 
 
 ----
 
-Un composant est écrit comme une vrai fonction JS et ça en est !
+Un composant est écrit comme une vraie fonction JS et ça en est !
 
 React utilise une syntaxe proche du HTML mais qui est transformée en JS par un compilateur.
 
@@ -75,7 +75,7 @@ const MyCustomDiv = ({text}) => {
 
 ----
 
-Une page React est composée de composants imbriquées (tout comme le HTML).
+Une page React est composée de composants imbriqués (tout comme le HTML).
 
 Ces composants peuvent à la fois contenir d'autres composants ou des éléments natifs HTML (`div`, `button`, etc...)
 
@@ -97,11 +97,11 @@ Sans maitrise du JS, le code JSX peut être difficile à lire (différence entre
 
 ----
 
-En terme de styles, React s'adopte aussi bien avec des feuilles CSS classiques qu'avec des libs plus orientés CSS-in-JS
+En matière de style, React s'adopte aussi bien avec des feuilles CSS classiques qu'avec des libs plus orientés CSS-in-JS
 
 ----
 
-> Si vous avez un problème en React dites-vous que d'autres l'ont eût aussi, Google is your friend 😉
+> Si vous avez un problème en React dites-vous que d'autres l'ont eu aussi, Google is your friend 😉
 
 ---
 
@@ -111,7 +111,7 @@ Entrons dans le vif du sujet avec un petit "hello world !" des familles 👍
 
 1. Créer un nouveau dossier 📁 `helloWorld`
 
-2. Placer vous dedans avec votre terminal
+2. Se placer à l'intérieur avec votre terminal
 
 3. Faites `yarn init` ou `npm init` (Ne répondez pas aux diverses questions on s'en moque)
 
@@ -164,7 +164,7 @@ Pour cela on va utiliser quelques outils 😉
 
 7. Ajouter les dépendances suivantes `webpack webpack-cli webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react` en mode dev
 8. Créer un dossier 📁 `src` et déplacer le fichier `index.jsx` à l'intérieur et le renommer `index.js`
-9. Ajouter cette configuration webpack dans une fichier `webpack.config.js` à la racine du projet
+9. Ajouter cette configuration webpack dans un fichier `webpack.config.js` à la racine du projet
 
 ----
 
@@ -255,7 +255,7 @@ Et maitenant? Que vais-je faire? 🎵
 
 ----
 
-13. Un petite mise à jour de notre `package.json` pour ajouter nos nouveaux scripts
+13. Une petite mise à jour de notre `package.json` pour ajouter nos nouveaux scripts
 
 ```json
 {
@@ -281,7 +281,7 @@ And 🎉
 
 ---
 
-#### A savoir
+#### À savoir
 
 Webpack a pour but de lancer la transpilation des différents fichiers jsx vers du js pur et d'optimiser tous les assets de la page web avant de les mettre à disposition sur un serveur de dev
 
@@ -328,7 +328,7 @@ ReactDOM.render(React.createElement(HelloWorld), document.querySelector('#root')
 
 ----
 
-- Insérer du js entre les balises (le js est interprété lorsque le statements est encapsulé dans des accolades ex: `<span>{5 + 10}</span>`)
+- Insérer du js entre les balises (le js est interprété lorsque le statement est encapsulé dans des accolades ex: `<span>{5 + 10}</span>`)
 - Ajouter du style via un fichier css que vous importer dans le HelloWorld.jsx au début `import './HelloWorld.css'`
 
   Définir une classe dans ce css et l'utiliser via l'attribut `className` de la `div` (ou autres éléments)
@@ -355,7 +355,7 @@ function saluer() {
 
 ----
 
-Si on veut que le prenom soit dynamique on obtient
+Si on veut que le prénom soit dynamique on obtient
 
 ```js
 const saluer = (name) => {
@@ -424,7 +424,7 @@ function Hello(props) {
 
 ----
 
-#### Différentes versions similaire du composant
+#### Différentes versions similaires du composant
 
 ----
 
@@ -483,13 +483,13 @@ You turn !
 Ecrire un composant `MediaCard` qui accepte 3 `props`, un titre, un body et une url d'image.
 Le titre doit être rendu dans un `h3`, le body dans un `p` et l'url dans une balise `img`.
 
-> Peux-t-on les retourner directement tous les 3 ou doit on wrapper ces 3 balises ?
+> Peux-t-on les retourner directement tous les 3 ou doit-on wrapper ces 3 balises ?
 
 ----
 
-Integrer ce composant dans le `Render` de l'`index.js`
+Intégrer ce composant dans le `Render` de l'`index.js`
 
-> Peux-t-on passer du jsx plutot que du texte uniquement dans les props ? (passer des \<strong\> ou des \<i\>)
+> Peux-t-on passer du jsx plutôt que du texte uniquement dans les props ? (passer des \<strong\> ou des \<i\>)
 
 ---
 
@@ -539,15 +539,15 @@ React nous met à disposition un hook appelé `useState`
 
 ----
 
-> Qu'est ce qu'un hook ?
+> Qu'est-ce qu'un hook ?
 
 Un Hook est une fonction qui permet de « se brancher » sur des fonctionnalités React.
 
 ----
 
-`useState` est un Hook qui permet d’ajouter l’état local React à des fonctions composants.
+`useState` est un Hook qui permet d’ajouter l’état local React à des fonctions "composant".
 
-Ainsi nos états sont gérés entierement par React et donc son cloisonnée à chaque instance de composant et persistent durant la vie du composant.
+Ainsi nos états sont gérés entièrement par React et donc son cloisonnée à chaque instance de composant et persistent durant la vie du composant.
 
 ----
 
@@ -555,7 +555,7 @@ Ainsi nos états sont gérés entierement par React et donc son cloisonnée à c
 
 ----
 
-`useState` retourne un tableau dont le premier élement est l'état en question et le second la méthode permettant de le modifier de manière sûre et cloisonnée
+`useState` retourne un tableau dont le premier élément est l'état en question et le second la méthode permettant de le modifier de manière sûre et cloisonnée
 
 ----
 
@@ -573,7 +573,7 @@ Il est même possible de faire ses propres hooks custom permettant de faire du c
 
 ----
 
-⚠️2 règles à respecter avec les hooks
+⚠️ 2 règles à respecter avec les hooks
 
 ----
 
@@ -676,7 +676,7 @@ Démo !
 
 ----
 
-Ajoutons du css et rendons le dynamique aussi !
+Ajoutons du css et rendons-le dynamique aussi !
 
 ----
 
@@ -787,23 +787,23 @@ You turn !
 ----
 
 - Ajouter une notion de température (initialisé à 22°C) sur les chambres et la visualiser
-- Ajouter 2 bouton (+/-) pour pouvoir augmenter/diminuer la température d'une chambre
+- Ajouter 2 boutons (+/-) pour pouvoir augmenter/diminuer la température d'une chambre
 
 ---
 
 On a vu:
-- la création de composant
+- la création d'un composant
 - le passage de props pour rendre customisable un composant
 - la gestion d'état pour rendre dynamique un composant
 - la gestion du style
 
 ----
 
-> Que pouvons nous encore voir d'utile avant de passer au PWA?
+> Que pouvons-nous encore voir d'utile avant de passer au PWA?
 
 ---
 
-### Le fetching de données
+### Le fetching des données
 
 ----
 
@@ -811,7 +811,7 @@ On a vu:
 
 ----
 
-React n'a aucun outil privilégier pour faire cela
+React n'a aucun outil privilégié pour faire cela
 
 C'est une lib UI pas un lib de fetching 😉
 
@@ -823,11 +823,11 @@ Pour lui c'est :"Après que j'ai fini, je vais lancer un appel pour obtenir des 
 
 ----
 
-Une fois que ces données reviennent, elles doivent être mises en état, puis vous pouvez les restituer à partir de là
+Une fois que ces données reviennent, elles doivent être mises dans l'état, puis vous pouvez les restituer à partir de là
 
 ----
 
-On peut compliquer ce processus avec des services et des modèles de données, des redux-thunk et des sagas
+On peut compliquer ce processus avec des services et des modèles de données, des `redux-thunk` et des sagas
 
 Mais tout se résume à des éléments qui rendent des props et des states
 
@@ -847,7 +847,7 @@ Utiliser `axios` nous permettra de voir comment utiliser une lib externe dans no
 
 ----
 
-On va utiliser l'api `pokeapi.co` pour afficher une liste de pokemon et lorsqu'on en selectionnera un on affichera ses détails dans un panel à côté.
+On va utiliser l'api `pokeapi.co` pour afficher une liste de pokémons et lorsqu'on en sélectionnera un on affichera ses détails dans un panel à côté.
 
 ----
 
@@ -927,7 +927,7 @@ Ici, la fonction passée dans le `useEffect` ne sera appelé que lorsque `isLigh
 useEffect(() => isLightOn && temperature>20 && setIsLit(false), [isLightOn, temperature])
 ```
 
-On peut passer autant d'abonnements que voulu 😃
+On peut passer autant d'abonnements que voulut 😃
 
 ----
 
@@ -992,9 +992,9 @@ You turn !
 
 ----
 
-Ajouter une `div` en dessous de la liste de pokemon affichant les details du pokemon sur lequel on clique
+Ajouter une `div` en dessous de la liste de pokémon affichant les détails du pokémon sur lequel on clique
 
-Pour l'API, les informations sont sur la docs en ligne 😉([API](https://pokeapi.co))
+Pour l'API, les informations sont sur la doc en ligne 😉([API](https://pokeapi.co))
 
 ---
 
@@ -1002,7 +1002,7 @@ Pour l'API, les informations sont sur la docs en ligne 😉([API](https://pokeap
 
 ----
 
-Il est recommandé pour que sa web-app soit bien construite de passer par l'utilitaire de creation d'app de react
+Il est recommandé pour que sa web-app soit bien construite de passer par l'utilitaire de creation d'app de React
 
 `create-react-app`
 
@@ -1028,11 +1028,11 @@ npm start
 
 ----
 
-Avec cet outil, recréer un projet avec la liste des pokemons
+Avec cet outil, recréer un projet avec la liste des pokémons
 
 ----
 
-Pour l'hebergement nous allons utiliser `surge.sh`
+Pour l'hébergement, nous allons utiliser `surge.sh`
 
 ----
 
@@ -1064,7 +1064,7 @@ Et accéder à son projet en ligne 🎉
 
 ----
 
-Il s'agit d'un exemple avec Surge mais il existe beaucoup d'autres plateformes de deploiement
+Il s'agit d'un exemple avec Surge mais il existe beaucoup d'autres plateformes de déploiement
 
 > Google is your friend 😉
 

@@ -10,6 +10,6 @@
     "reveal-md": "^3.4.7"
   },
   "scripts": {
-    "start": "npx reveal-md react-beginner.md -w --theme blood --highlight-theme monokai"
+    "start": "npx reveal-md -w --theme sky --highlight-theme monokai"
   }
 }
