@@ -75,7 +75,3 @@ Faites le sérieusement vous êtes filmés 📸 !
 😱 Euh notés 💯 !
 
 🏁 💥
-
----
-
-[Correction](https://github.com/millehorde/map-pwa-react)
